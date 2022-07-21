@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "redditapi",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authredditclientf8117dd4",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

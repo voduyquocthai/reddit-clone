@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "redditapi",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/apple/Documents/Nodejs/reddit-clone/reddit-client/amplify/backend/api/redditapi/schema.graphql",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authredditclientf8117dd4"
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "API_KEY",
+        "expirationTime": 365,
+        "apiKeyExpirationDate": "2023-07-15T16:23:40.011Z",
+        "keyDescription": "reddit"
+      }
+    ]
+  }
+}

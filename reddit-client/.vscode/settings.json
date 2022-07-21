@@ -27,5 +27,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.fixAll.format": true
-  }
+  },
+  "cSpell.words": [
+    "awsconfig"
+  ]
 }
