@@ -7,6 +7,19 @@ export const onCreatePost = /* GraphQL */ `
     onCreatePost(owner: $owner) {
       id
       title
+      contents
+      image
+      votes {
+        items {
+          id
+          vote
+          postID
+          createdAt
+          updatedAt
+          owner
+        }
+        nextToken
+      }
       comments {
         items {
           id
@@ -29,6 +42,19 @@ export const onUpdatePost = /* GraphQL */ `
     onUpdatePost(owner: $owner) {
       id
       title
+      contents
+      image
+      votes {
+        items {
+          id
+          vote
+          postID
+          createdAt
+          updatedAt
+          owner
+        }
+        nextToken
+      }
       comments {
         items {
           id
@@ -51,6 +77,19 @@ export const onDeletePost = /* GraphQL */ `
     onDeletePost(owner: $owner) {
       id
       title
+      contents
+      image
+      votes {
+        items {
+          id
+          vote
+          postID
+          createdAt
+          updatedAt
+          owner
+        }
+        nextToken
+      }
       comments {
         items {
           id
@@ -77,6 +116,11 @@ export const onCreateComment = /* GraphQL */ `
       post {
         id
         title
+        contents
+        image
+        votes {
+          nextToken
+        }
         comments {
           nextToken
         }
@@ -99,6 +143,11 @@ export const onUpdateComment = /* GraphQL */ `
       post {
         id
         title
+        contents
+        image
+        votes {
+          nextToken
+        }
         comments {
           nextToken
         }
@@ -121,6 +170,92 @@ export const onDeleteComment = /* GraphQL */ `
       post {
         id
         title
+        contents
+        image
+        votes {
+          nextToken
+        }
+        comments {
+          nextToken
+        }
+        createdAt
+        updatedAt
+        owner
+      }
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const onCreateVote = /* GraphQL */ `
+  subscription OnCreateVote($owner: String) {
+    onCreateVote(owner: $owner) {
+      id
+      vote
+      postID
+      post {
+        id
+        title
+        contents
+        image
+        votes {
+          nextToken
+        }
+        comments {
+          nextToken
+        }
+        createdAt
+        updatedAt
+        owner
+      }
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const onUpdateVote = /* GraphQL */ `
+  subscription OnUpdateVote($owner: String) {
+    onUpdateVote(owner: $owner) {
+      id
+      vote
+      postID
+      post {
+        id
+        title
+        contents
+        image
+        votes {
+          nextToken
+        }
+        comments {
+          nextToken
+        }
+        createdAt
+        updatedAt
+        owner
+      }
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const onDeleteVote = /* GraphQL */ `
+  subscription OnDeleteVote($owner: String) {
+    onDeleteVote(owner: $owner) {
+      id
+      vote
+      postID
+      post {
+        id
+        title
+        contents
+        image
+        votes {
+          nextToken
+        }
         comments {
           nextToken
         }
