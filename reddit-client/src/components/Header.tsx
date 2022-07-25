@@ -98,7 +98,7 @@ export default function Header() {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={() => signUserOut()}>Sign Out</MenuItem>
+                <MenuItem onClick={() => signUserOut()}>{user.getUsername().toString()} - Sign Out</MenuItem>
               </Menu>
             </div>
           )}
