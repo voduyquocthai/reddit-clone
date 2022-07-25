@@ -8,7 +8,7 @@ const nextConfig = {
   },
   images: {
     domains: [
-      'redditclonea4f35ee94c414237ada7a8e3f084e8ed154921-dev.s3.ap-southeast-2.amazonaws.com',
+      'redditclientec33db97a41e44968a49be4b1936901e155415-dev.s3.ap-southeast-1.amazonaws.com',
       'source.unsplash.com'
     ]
   }

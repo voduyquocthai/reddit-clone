@@ -12,7 +12,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchPostsFromApi = async (): Promise<Post[]> => {
-      const allPosts = (await API.graphql({ query: listPosts })) as {
+      const allPosts = (await API.graphql({ query: listPosts, authMode: 'API_KEY' })) as {
         data: ListPostsQuery;
         errors: any[];
       };

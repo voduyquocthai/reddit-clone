@@ -13,7 +13,8 @@
     },
     "categories": {
       "auth": {
-        "redditclientf8117dd4": {}
+        "redditclientf8117dd4": {},
+        "true": {}
       }
     }
   }

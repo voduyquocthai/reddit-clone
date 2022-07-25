@@ -145,7 +145,7 @@ export default function PostPreview({ post }: Props): ReactElement {
         alignItems='flex-start'
         wrap='nowrap'
         spacing={3}
-        style={{ padding: 12, marginTop: 24 }}
+        style={{ padding: 12, marginTop: 24, marginBottom: 10 }}
       >
         {/* Upvote / votes / downvote */}
         <Grid item style={{ maxWidth: 128 }}>

@@ -78,7 +78,7 @@ export default function IndividualPost({ post }: Props): ReactElement {
               error={errors.comment ? true : false}
               helperText={errors.comment ? errors.comment.message : null}
               {...register('comment', {
-                required: { value: true, message: 'Please enter a username.' },
+                required: { value: true, message: 'Please enter a comment.' },
                 maxLength: {
                   value: 240,
                   message: 'Please enter a comment under 240 characters.'
@@ -114,7 +114,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     variables: {
       id: params.id
     },
-    authMode: 'API_KEY'
+    authMode: GRAPHQL_AUTH_MODE.API_KEY
   })) as { data: GetPostQuery }
 
   // By returning { props: { posts } }, the Individual Post component
@@ -135,7 +135,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   const response = (await SSR.API.graphql({
     query: listPosts,
-    authMode: 'API_KEY' 
+    authMode: GRAPHQL_AUTH_MODE.API_KEY
   })) as {
     data: ListPostsQuery
     errors: any[]
